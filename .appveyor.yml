@@ -65,8 +65,8 @@ install:
 
   # Install the build dependencies of the project.
   - pip install %NP_TEST_DEP%
-  - pip install -r requirements\default.txt
-  - pip install -r requirements\build.txt
+  - pip install --prefer-binary -r requirements\default.txt
+  - pip install --prefer-binary -r requirements\build.txt
   - python setup.py bdist_wheel
   - ps: |
       # Upload artifact to Appveyor immediately after build
